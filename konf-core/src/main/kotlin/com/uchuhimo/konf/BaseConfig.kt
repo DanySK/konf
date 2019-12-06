@@ -557,7 +557,7 @@ open class BaseConfig(
                 if (item !in this) {
                     val path = name.toPath()
                     if (path in this) {
-                        throw NameConflictException("item $name cannot be added")
+                        throw NameConflictException("""item "$name" cannot be added""")
                     }
                     val node = ItemNode(
                         when (item) {
